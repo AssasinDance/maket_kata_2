@@ -1,0 +1,147 @@
+/*Общие стили для корректного отображения фундаментальных боксов*/
+@font-face {
+    font-family: "TT Lakes";
+    src: url("fonts/TTLakes-Regular.ttf");
+}
+
+@font-face {
+    font-family: "TT Lakes Medium";
+    src: url("fonts/TTLakes-Medium.ttf");
+}
+
+@font-face {
+    font-family: "TT Lakes Bold";
+    src: url("fonts/TTLakes-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "TT Lakes";
+}
+
+.button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.25);
+}
+
+/*Стили для конкретных боксов разметки*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    min-height: 100vh;
+    box-shadow: -13px 0 44px 10px #444444;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+}
+
+.menu-header__burger {
+    background: url("image/burger.svg") no-repeat;
+}
+
+.menu-header__search {
+    background: url("image/search.svg") no-repeat;
+    margin-left: auto;
+}
+
+.list {
+    padding: 0;
+    list-style: none;
+}
+
+.list__item > a {
+    display: inline-block;
+    padding: 16px 24px;
+}
+
+.list__item > a:hover, .lang__option:hover {
+    text-decoration: underline;
+}
+
+.list__item--current > a, .lang--current {
+    color: #7E7E82;
+}
+.list__item--current > a:hover, .lang--current:hover {
+    text-decoration: none;
+}
+
+.list__item--current > a::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 4px;
+    border-radius: 0 50% 50% 0;
+    background-color: #41F6D7;
+    left: 0;
+    transform: translateY(-4px);
+}
+
+.menu-footer {
+    padding: 32px 24px;
+}
+
+.menu__menu-footer {
+    margin-top: auto;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.contact-buttons__phone {
+    background: url("image/phone.svg") no-repeat;
+}
+
+.contact-buttons__chat {
+    background: url("image/chat.svg") no-repeat;
+}
+
+.contact-buttons__profile {
+    background: url("image/profile.svg") no-repeat;
+}
+
+.contact__phone {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "TT Lakes Bold";
+}
+
+.lang {
+    display: flex;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.lang__option, .contact__email {
+    font-family: "TT Lakes Medium";
+}
